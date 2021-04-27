@@ -27,3 +27,5 @@ CREATE TABLE parks (
     pplpersqmile TEXT,
     avgincomeperhshd TEXT
 );
+
+select * from parks;
