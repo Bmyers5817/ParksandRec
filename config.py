@@ -1,2 +1,2 @@
 # Postgress password
-ppwd = "04121553"
+ppwd = "your password"
