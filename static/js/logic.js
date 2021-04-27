@@ -1,3 +1,6 @@
+console.log("clt");
+console.log(clt);
+
 // Creating map object
 var myMap = L.map("map", {
   center: [40.7, -73.95],

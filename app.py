@@ -31,6 +31,7 @@ Parks = Base.classes.parks
 
 # Create an instance of Flask
 app = Flask(__name__)
+# app = Flask(__name__, template_folder=".")
 
 
 # Route to render index.html template using data from Mongo
