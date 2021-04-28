@@ -1,5 +1,6 @@
-console.log("clt");
-console.log(clt);
+var parks_json = JSON.parse(parks_data);
+console.log(parks_json);
+
 
 // Creating map object
 var myMap = L.map("map", {

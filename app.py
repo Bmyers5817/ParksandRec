@@ -53,13 +53,14 @@ def home():
     for row in results:
         park_dict = row2dict(row)
         all_parks.append(park_dict)
+    # print(len(all_parks))
 
     # Convert list of dictionaries to get the JSON representation
-    clt_json = jsonify(all_parks)
+    # parks_json = jsonify(all_parks)
 
 
     # Return template and data
-    return render_template("index.html", clt=clt_json)
+    return render_template("index.html", parks=all_parks)
 
 if __name__ == "__main__":
     app.run(debug=True)
