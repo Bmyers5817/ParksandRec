@@ -22,14 +22,18 @@
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/styles.css">
 
+  <!-- To avoid favicon.ico error message -->
+  <link rel="icon" href="data:;base64,=">
+
 </head>
 
-<body>
+<body >
+
   <!-- div class="navigation"-->
   <div class="navigation">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid navbar-custom">
-        <a class="navbar-brand" href="index.html">Charlotte Parks</a>
+        <a class="navbar-brand" href="/">Charlotte Parks</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -44,8 +48,8 @@
                 Park Plots
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="Visualizations/volume.html">Park Accessibility</a>
-                <a class="dropdown-item" href="Visualizations/housing.html">Parks vs. Housing</a>
+                <a class="dropdown-item" href="static/Visualizations/volume.html">Park Accessibility</a>
+                <a class="dropdown-item" href="static/Visualizations/housing.html">Parks vs. Housing</a>
               </div>
           </ul>
           <form class="form-inline my-2 my-lg-0"></form>
@@ -94,8 +98,14 @@
           src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
         <!-- Our JS -->
-        <script type="text/javascript" src="static/js/config.js"></script>
-        <script type="text/javascript" src="static/js/logic.js"></script>
+
+
+        <script type="text/javascript" src="/static/js/config.js"></script>
+
+        <script>
+          var parks_data = '{{ parks | tojson | safe }}';
+        </script>
+        <script type="text/javascript" src="/static/js/logic.js"></script>
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

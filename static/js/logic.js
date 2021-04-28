@@ -1,3 +1,7 @@
+var parks_json = JSON.parse(parks_data);
+console.log(parks_json);
+
+
 // Creating map object
 var myMap = L.map("map", {
   center: [40.7, -73.95],
