@@ -22,8 +22,6 @@
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/styles.css">
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
   <!-- To avoid favicon.ico error message -->
   <link rel="icon" href="data:;base64,=">
 
@@ -54,9 +52,18 @@
             <p>Map Analysis Here</p>
           <br> 
 
-          <h3 style="color:lightseagreen" style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Scatter Plot</strong></h3>
-          <div id="scatter-plot"></div>
+          <h3 style="color:lightseagreen" style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Map 2</strong></h3>
+          <div class="map2"></div>
           <div class="col-md-12" id=blank></div>
+          <script type="text/javascript" src="/static/js/logic2.js"></script>
+          <div class="col-md-12" id=blank></div>
+          <p>Chart Analysis Here</p>
+          <br>
+
+          <h3 style="color:lightseagreen" style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Scatter Plot</strong></h3>
+          <div class="scatter-plot"></div>
+          <div class="col-md-12" id=blank></div>
+          <script type="text/javascript" src="/static/js/logic3.js"></script>
           <div class="col-md-12" id=blank></div>
           <p>Chart Analysis Here</p>
 
@@ -66,6 +73,7 @@
           <h2 style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Park Events</strong></h2>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button" style="background-color:lightseagreen"
               style="color: #fff">Scrape New Data!</a></p>
+              <h3 class="heading" style="color:#333;">{{parks."Park_Events"}}</h3>   
         </div>
 
         <!-- Leaflet JS -->
@@ -80,13 +88,14 @@
           src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
         <!-- Our JS -->
-        <script type="text/javascript" src="/static/js/config.js"></script>
+        <script type="text/javascript" src="../static/js/config.js"></script>
 
         <script>
           var parks_data = '{{ parks | tojson | safe }}';
         </script>
-        <script type="text/javascript" src="/static/js/logic-map.js"></script>
-        <script type="text/javascript" src="/static/js/logic-scatter-plot.js"></script>
+        <script type="text/javascript" src="/static/js/logic.js"></script>
+        <script type="text/javascript" src="/static/js/logic2.js"></script>
+        <script type="text/javascript" src="/static/js/logic3.js"></script>
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

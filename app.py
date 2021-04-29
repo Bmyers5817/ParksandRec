@@ -10,7 +10,6 @@ def row2dict(row):
     d = {}
     for column in row.__table__.columns:
         d[column.name] = str(getattr(row, column.name))
-
     return d
 
 username='postgres'
@@ -41,8 +40,6 @@ def home():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    # Return a list of Measurement data including date and prcp
-
     # Query all passengers
     results = session.query(Parks).all()
 
@@ -53,11 +50,6 @@ def home():
     for row in results:
         park_dict = row2dict(row)
         all_parks.append(park_dict)
-    # print(len(all_parks))
-
-    # Convert list of dictionaries to get the JSON representation
-    # parks_json = jsonify(all_parks)
-
 
     # Return template and data
     return render_template("index.html", parks=all_parks)

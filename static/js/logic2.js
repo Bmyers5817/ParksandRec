@@ -1,9 +1,10 @@
-var parks_json = JSON.parse(parks_data);
-console.log(parks_json);
+var parks_json2 = JSON.parse(parks_data);
+console.log("logic2.js");
+console.log(parks_json2);
 
 
 // Creating map object
-var myMap = L.map("map", {
+var myMap2 = L.map("map2", {
   center: [40.7, -73.95],
   zoom: 11
 });
@@ -16,7 +17,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   zoomOffset: -1,
   id: "mapbox/streets-v11",
   accessToken: API_KEY
-}).addTo(myMap);
+}).addTo(myMap2);
 
 // Store API query variables
 var baseURL = "https://data.cityofnewyork.us/resource/fhrw-4uyv.json?";
@@ -25,13 +26,13 @@ var complaint = "&complaint_type=Rodent";
 var limit = "&$limit=10000";
 
 // Assemble API query URL
-var url = baseURL + date + complaint + limit;
+var url2 = baseURL + date + complaint + limit;
 
 // Grab the data with d3
-d3.json(url).then(function(response) {
+d3.json(url2).then(function(response) {
 
   // Create a new marker cluster group
-  var markers = L.markerClusterGroup();
+  var markers2 = L.markerClusterGroup();
 
   // Loop through data
   for (var i = 0; i < response.length; i++) {
@@ -43,13 +44,13 @@ d3.json(url).then(function(response) {
     if (location) {
 
       // Add a new marker to the cluster group and bind a pop-up
-      markers.addLayer(L.marker([location.coordinates[1], location.coordinates[0]])
+      markers2.addLayer(L.marker([location.coordinates[1], location.coordinates[0]])
         .bindPopup(response[i].descriptor));
     }
 
   }
 
   // Add our marker cluster layer to the map
-  myMap.addLayer(markers);
+  myMap2.addLayer(markers2);
 
 });
