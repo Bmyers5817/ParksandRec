@@ -78,7 +78,7 @@ The activity list was then connected to an SQL database and then converted into 
 
 The first five steps are completed only once. If you have already created the db with tables and want a full refresh then you need to drop the tables first.
 
-##Team Members
+## Team Members
 * Kurt Dietrich
 * Sarah Klein
 * Beth Meyers
