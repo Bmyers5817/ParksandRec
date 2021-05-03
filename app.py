@@ -25,8 +25,10 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save references to each table
-# Assign the measurement class to a variable called `Measurement`
+# Assign the measurement class to a variable called `Parks`
 Parks = Base.classes.parks
+ParksEv = Base.classes.parks_ev
+ZipcodeCoord = Base.classes.zipcode_coord
 
 # Create an instance of Flask
 app = Flask(__name__)
@@ -41,7 +43,9 @@ def home():
     session = Session(engine)
 
     # Query all passengers
-    results = session.query(Parks).all()
+    parks_results = session.query(Parks).all()
+    parksEv_results = session.query(ParksEv).all()
+    ZipcodeCoord_results = session.query(ZipcodeCoord).all()
 
     session.close()
 
@@ -50,9 +54,22 @@ def home():
     for row in results:
         park_dict = row2dict(row)
         all_parks.append(park_dict)
+    all_parksEv = []
+    for row in results:
+        parkEv_dict = row2dict(row)
+        all_parksEv.append(park_dictEv)
+    all_zipcodeCoord = []
+    for row in results:
+        ZipcodeCoord_dict = row2dict(row)
+        all_zipcodeCoord.append(ZipcodeCoord_dict)
+    dict_parks = {
+        'parks': all_parks,
+        'parksEv': all_parksEv,
+        'zipcodeCoord': all_zipcodeCoord
+    }
 
     # Return template and data
-    return render_template("index.html", parks=all_parks)
+    return render_template("index.html", parks=dict_parks)
 
 if __name__ == "__main__":
     app.run(debug=True)
