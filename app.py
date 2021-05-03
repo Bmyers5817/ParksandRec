@@ -51,15 +51,15 @@ def home():
 
     # Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
     all_parks = []
-    for row in results:
+    for row in parks_results:
         park_dict = row2dict(row)
         all_parks.append(park_dict)
     all_parksEv = []
-    for row in results:
+    for row in parksEv_results:
         parkEv_dict = row2dict(row)
-        all_parksEv.append(park_dictEv)
+        all_parksEv.append(parkEv_dict)
     all_zipcodeCoord = []
-    for row in results:
+    for row in ZipcodeCoord_results:
         ZipcodeCoord_dict = row2dict(row)
         all_zipcodeCoord.append(ZipcodeCoord_dict)
     dict_parks = {
