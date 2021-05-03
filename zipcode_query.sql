@@ -1,4 +1,5 @@
 CREATE TABLE zipcode_coord (
+    zip_id SERIAL PRIMARY KEY,
     zipcode TEXT,
     geometry TEXT,
     coordinates TEXT,
