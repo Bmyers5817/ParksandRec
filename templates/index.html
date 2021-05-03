@@ -16,7 +16,8 @@
 
   <!-- Marker Cluster CSS -->
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
@@ -49,46 +50,49 @@
 
               what those parks are used for (walking, biking, picnicking, etc.), whether there is a correlation between
 
-              park access and home prices, and what recreational events are available to the public.</strong></p>
+              park access and affluency, and what recreational events are available to the public.</strong></p>
           <br>
           <br>
           <h3 style="text-align: left" style="color:lightseagreen"
             style="font-family: Georgia, 'Times New Roman', Times, serif" style="text-align: left;"><strong>Family
-              Population Density by Zipcode</strong></h3>
+              Population Density by Zip Code</strong></h3>
           <br>
-          <div id="map" style="height: 75%"></div>
+          <div id="map" style="height: 65%"></div>
           <div class="col-md-8" id=blank></div>
-          <p><strong>This visualization reflects how densely populated a particular zip code is in the Charlotte
-              metropolitan area. The color coding reflects that central
-              Charlotte is not as densely populated as the outer regions and immediate suburbs which have more
-              families.</strong></p>
+          <p><strong>This visualization reflects the population density of a particular zip code in the greater
+              Charlotte metropolitan area. The color coding reflects that central Charlotte is less densely populated as the outer
+              regions and immediate suburbs which contain more family households.</strong></p>
+          <br>
+          <br>
+          <h3 style="text-align: left" style="color:lightseagreen"
+            style="font-family: Georgia, 'Times New Roman', Times, serif" style="text-align: left;"><strong>Charlotte
+              Parks: Satellite View
+            </strong></h3>
+          <div id="map2" style="height: 45%"></div>
+          <br>
+          <p><strong>The Satellite Visualization reflects that park quantity is greatest in the central Charlotte
+              metropolitan zip codes. As population is more concentrated in the outer regions, residents are
+              required to travel to the central city in order to take advantage of park offerings.</strong></p>
+          <br>
           <br>
 
           <h3 style="text-align: left" style="color:lightseagreen"
-            style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Park Quantity vs. Population Density</strong>
+            style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Park Quantity vs. Population
+              Density</strong>
           </h3>
           <br>
-          <!-- <div class="bar"></div> -->
-          <!-- <script src="https://d3js.org/d3.v5.min.js"></script>
-          <script src="../static/js/logic7.js"></script> -->
           <img src="/static/js/image.png">
-          <!-- <div class="col-md-12" style="height: 25%" id=blank></div>
+          <!-- <div class="bar"></div>
+          <script src="https://d3js.org/d3.v5.min.js"></script>
+          <script src="/static/js/logic7.js"></script>        
+          <div class="col-md-12" style="height: 25%" id=blank></div> -->
           <br>
-          <br> -->
           <br>
+          <p><strong>The bar chart reinforces that zip codes with the greatest population density (represented by the
+              red bars) do not have access to as many parks (represented by the blue bars). Interestingly, the zip codes with low population
+              density but relatively high numbers of community parks are located in more affluent areas such as zip code 28209 (i.e. around
+              South Park).</strong></p>
           <br>
-          <p><strong>We can see from the bar chart that areas with the greatest population density do not have
-            access to many parks.  Areas with more numerous parks such as those in area code 28209 ie around South Park
-            are more affluent and is less densely populated. 
-          </strong></p>
-
-          
-          <h3 style="text-align: left" style="color:lightseagreen"
-            style="font-family: Georgia, 'Times New Roman', Times, serif" style="text-align: left;"><strong>Charlotte Parks: Satellite View
-        </strong></h3>
-        <div id="map2" style="height: 75%"></div>
-
-
           <br>
           <h3 style="text-align: left" style="color:lightseagreen"
             style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Charlotte Parks
@@ -192,26 +196,27 @@
       <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
         integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-      <!-- d3 JS -->
+      
+        <!-- d3 JS -->
       <script src="https://d3js.org/d3.v5.min.js"></script>
-
 
       <!-- Marker Cluster JS -->
       <script type="text/javascript"
         src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        <!-- Our JS -->
+      <!-- Our JS -->
       <script type="text/javascript" src="/static/js/config.js"></script>
 
       <script>
@@ -221,7 +226,6 @@
       <script type="text/javascript" src="/static/js/choropleth.js"></script>
       <script type="text/javascript" src="/static/js/logic.js"></script>
       <script type="text/javascript" src="/static/js/maplogic.js"></script>
-      <!-- <script type="text/javascript" src="../static/js/logic-scatter-plot.js"></script> -->
 
 
 </body>
