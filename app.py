@@ -54,6 +54,18 @@ def home():
     for row in parks_results:
         park_dict = row2dict(row)
         all_parks.append(park_dict)
+    geojson = {
+        "type": "FeatureCollection",
+        "features": [
+        {
+            "type": "Feature",
+            "geometry" : {
+                "type": "Point",
+                "coordinates": [float(d["parklongitude"]), float(d["parklatitude"])],
+                },
+            "properties" : d,
+        } for d in all_parks]
+    }    
     all_parksEv = []
     for row in parksEv_results:
         parkEv_dict = row2dict(row)
@@ -64,6 +76,7 @@ def home():
         all_zipcodeCoord.append(ZipcodeCoord_dict)
     dict_parks = {
         'parks': all_parks,
+        'geojson': geojson,
         'parksEv': all_parksEv,
         'zipcodeCoord': all_zipcodeCoord
     }

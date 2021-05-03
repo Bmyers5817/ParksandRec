@@ -9,6 +9,7 @@ body {
    }
 
 #map,
+#map2,
 body,
 html {
      height: 175%;
@@ -109,3 +110,4 @@ background-color:#fff;
 table{margin-left: 0px;
 font-size: smaller;}
 }
+
