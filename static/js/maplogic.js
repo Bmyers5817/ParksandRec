@@ -48,8 +48,8 @@ d3.json(geoData).then(function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Total Families:<br>" +
-        "$" + feature.properties.TotalFamilies);
+      layer.bindPopup("GeoName: " + feature.properties.geoname + "<br>Total Families:<br>" +
+      feature.properties.TotalFamilies);
     }
   }).addTo(myMap);
 
