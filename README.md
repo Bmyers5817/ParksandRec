@@ -43,7 +43,8 @@ pulled by other team members to leverage in visualization creation.
 The initial HTML/CSS code was built as a shell with placehoders linked to Javascript files for team members to build out thier visualizations and apply 
 consistant formatting and sizing using Bootstrap.  As the project advanced, the html/css styling was updated to ensure appropriate svg image sizing as the 
 seperate javascript visualization files were completed.  Additionally, the html file was leveraged to incorporate analysis in paragraph form for each visualization. 
-It was also used to mitigate challenges with Flask alignment. 
+It was also used to mitigate challenges with Flask alignment. The website also includes user interaction via a drop down menue which toggles between different visualizations
+including the home page containing map visualizations, a second page reflecting a bar chart visualization, and a third reflecting a table constructed from scraped data.  
 
 ## Visualizations
 The visualizations the team generated told the story of how the most densely populated zip codes in Charlotte have less access to public parks.  
