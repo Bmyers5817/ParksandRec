@@ -4,7 +4,6 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
-from config import ppwd
 
 def row2dict(row):
     d = {}
@@ -12,11 +11,12 @@ def row2dict(row):
         d[column.name] = str(getattr(row, column.name))
     return d
 
-username='postgres'
-password=ppwd
+username='spuegfepadociu'
+password="a79dea5675925b9167e7bb37ba6a7ee952504d6923b169da41514753b806339a"
 port=5432
-database='parks_db'
-connection_str = f"postgresql://{username}:{password}@localhost:{port}/{database}"
+database='d30hdohca3muio'
+dbname = 'ec2-3-233-7-12.compute-1.amazonaws.com'
+connection_str = f"postgres://{username}:{password}@{dbname}:{port}/{database}"
 engine = create_engine(connection_str)
 
 # reflect an existing database into a new model
