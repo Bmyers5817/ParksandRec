@@ -46,6 +46,8 @@ seperate javascript visualization files were completed.  Additionally, the html 
 It was also used to mitigate challenges with Flask alignment. The website invites user interaction via a drop down menu which toggles between different visualizations.
 This is divided into a home page containing geomapping visualizations, a page reflecting a bar chart visualization, and a third reflecting a table constructed from scraped data.  
 
+We then added to a Heroku App at https://charlotte-parks.herokuapp.com/ the coding of this was performed through a new github page https://github.com/luiserojas74/ParksandRec.
+
 ## Visualizations
 The visualizations the team generated told the story of how the most densely populated zip codes in Charlotte have less access to public parks.  
 Additionally, less densely populated areas with higher quantities of public parks are generally more affluent. 
